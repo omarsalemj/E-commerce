@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*{
+* {
   padding: 0;
   margin: 0;
-  font-family:'Almarai', sans-serif;;
+  box-sizing: border-box;
+  font-family: 'Almarai', sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
 }

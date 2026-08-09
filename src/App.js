@@ -10,7 +10,7 @@ import Login from "./pages/Login";
 
 const Layout = () => {
   return(
-    <div className="font-bodyFont">
+    <div className="font-bodyFont min-h-screen overflow-x-hidden bg-white text-slate-900">
       <Header />
       <ScrollRestoration />
       <Outlet />
@@ -48,9 +48,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <div className="font-bodyFont">
-        <RouterProvider router={router} />
-      </div>
+      <RouterProvider router={router} />
     </>
   );
 }
