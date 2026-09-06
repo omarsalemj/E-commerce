@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MdOutlineStar } from 'react-icons/md'
 import { useDispatch } from 'react-redux'
 import { useLocation, Link } from 'react-router-dom'
@@ -28,7 +28,7 @@ const Product = () => {
             className='h-[22rem] w-full rounded-[1.25rem] object-cover bg-slate-100 sm:h-[28rem] lg:h-[38rem]'
           />
           {details.isNew && (
-            <span className='absolute right-4 top-4 rounded-full bg-slate-950 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-lg'>
+            <span className='absolute right-4 top-4 rounded-full bg-slate-900 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-lg'>
               Sale
             </span>
           )}
@@ -42,7 +42,7 @@ const Product = () => {
             </h2>
             <div className='flex flex-wrap items-center gap-4 text-sm sm:text-base'>
               <p className='text-slate-500 line-through'>${details.oldPrice}</p>
-              <p className='text-2xl font-semibold text-slate-950'>${details.price}</p>
+              <p className='text-2xl font-semibold text-slate-900'>${details.price}</p>
             </div>
           </div>
 
@@ -96,7 +96,7 @@ const Product = () => {
             </button>
           </div>
 
-          <Link to='/' className='inline-flex w-fit items-center gap-2 text-sm font-semibold text-slate-500 transition hover:text-slate-950'>
+          <Link to='/' className='inline-flex w-fit items-center gap-2 text-sm font-semibold text-slate-500 transition hover:text-slate-900'>
             <HiOutlineArrowLeft />
             Go shopping
           </Link>

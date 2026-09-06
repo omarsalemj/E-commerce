@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HiArrowRight, HiArrowLeft } from 'react-icons/hi'
 import { Link } from 'react-router-dom'
 
@@ -48,7 +48,7 @@ const Banner = () => {
 
         <div className="relative z-20 grid min-h-[72vh] items-end lg:min-h-[82vh] lg:grid-cols-[1.08fr_0.92fr]">
           <div className="flex flex-col justify-center px-6 pb-8 pt-16 sm:px-8 sm:pb-10 lg:px-14 lg:py-16">
-            <div className="section-badge w-fit border-white/15 bg-white/10 text-white backdrop-blur-sm">
+            <div className="section-badge w-fit border-white/10 bg-white/10 text-white backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-orange-300 shadow-[0_0_18px_rgba(251,191,36,0.9)]" />
               New season collection
             </div>
@@ -60,10 +60,10 @@ const Banner = () => {
               Explore curated picks with a sharper visual edge, smoother transitions, and a calmer shopping experience from first scroll to checkout.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link to="/" className="primary-button bg-white text-slate-950 hover:bg-orange-50">
+              <Link to="/" className="primary-button bg-white text-slate-900 hover:bg-orange-50">
                 Shop now <HiArrowRight />
               </Link>
-              <div className="secondary-button border-white/15 bg-white/10 text-white backdrop-blur-sm hover:border-white/25 hover:bg-white/15 hover:text-white">
+              <div className="secondary-button border-white/10 bg-white/10 text-white backdrop-blur-sm hover:border-white/25 hover:bg-white/10 hover:text-white">
                 Free delivery over $50
               </div>
             </div>
@@ -73,7 +73,7 @@ const Banner = () => {
             <div className="surface-soft max-w-sm border-white/10 bg-white/10 p-5 text-white backdrop-blur-md">
               <p className="text-xs font-semibold uppercase tracking-[0.26em] text-orange-300">Featured mood</p>
               <h2 className="mt-3 text-2xl font-semibold">Built for a smoother browse.</h2>
-              <p className="mt-3 text-sm leading-6 text-slate-100/85">
+              <p className="mt-3 text-sm leading-6 text-slate-100/80">
                 Clean surfaces, rounded controls, and a layout that keeps the products feeling more premium without changing how the app works.
               </p>
               <div className="mt-6 grid grid-cols-2 gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-slate-200">
@@ -93,7 +93,7 @@ const Banner = () => {
                 key={index}
                 onClick={() => setcurrentSlide(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  currentSlide === index ? 'w-8 bg-white sm:w-10' : 'w-2 bg-white/45 hover:bg-white/70 sm:w-2.5'
+                  currentSlide === index ? 'w-8 bg-white sm:w-10' : 'w-2 bg-white/50 hover:bg-white/70 sm:w-2.5'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

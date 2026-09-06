@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import { BsFillCartPlusFill } from 'react-icons/bs'
 import { HiOutlineArrowLeft } from 'react-icons/hi'
 import { MdOutlineClose } from 'react-icons/md'
@@ -101,7 +101,7 @@ const CartItem = () => {
                     </button>
                   </div>
                 </div>
-                <p className='text-right text-lg font-semibold text-slate-950'>${item.quantity * item.price}</p>
+                <p className='text-right text-lg font-semibold text-slate-900'>${item.quantity * item.price}</p>
               </div>
             </div>
           ))
@@ -127,7 +127,7 @@ const CartItem = () => {
           Reset Cart
         </button>
 
-        <Link to='/' className='inline-flex items-center gap-2 text-sm font-semibold text-slate-500 transition hover:text-slate-950'>
+        <Link to='/' className='inline-flex items-center gap-2 text-sm font-semibold text-slate-500 transition hover:text-slate-900'>
           <HiOutlineArrowLeft />
           Go shopping
         </Link>

@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -30,7 +30,7 @@ const ProductsCard = ({ product }) => {
           loading='lazy'
         />
         {product.isNew && (
-          <span className='absolute left-4 top-4 z-20 rounded-full bg-slate-950 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-lg'>
+          <span className='absolute left-4 top-4 z-20 rounded-full bg-slate-900 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-lg'>
             Sale
           </span>
         )}
@@ -46,7 +46,7 @@ const ProductsCard = ({ product }) => {
           </div>
           <div className='shrink-0 text-right'>
             <p className='text-xs text-slate-400 line-through'>${product.oldPrice}</p>
-            <p className='text-base font-semibold text-slate-950 sm:text-lg'>${product.price}</p>
+            <p className='text-base font-semibold text-slate-900 sm:text-lg'>${product.price}</p>
           </div>
         </div>
 

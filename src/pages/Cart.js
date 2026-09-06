@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import StripeCheckout from 'react-stripe-checkout'
 import { ToastContainer, toast } from 'react-toastify'
@@ -35,9 +35,9 @@ const Cart = () => {
           <div className='absolute inset-0 bg-[linear-gradient(135deg,rgba(15,23,42,0.92)_0%,rgba(30,41,59,0.8)_50%,rgba(249,115,22,0.12)_100%)]' />
           <img src='https://images.hdqwalls.com/download/swimming-pool-water-dt-2560x1440.jpg' alt='cartImg' className='absolute inset-0 h-full w-full object-cover opacity-25' />
           <div className='relative z-10 flex min-h-[12rem] flex-col justify-end gap-3 text-white sm:min-h-[14rem]'>
-            <span className='section-badge w-fit border-white/15 bg-white/10 text-white backdrop-blur-sm'>Checkout</span>
+            <span className='section-badge w-fit border-white/10 bg-white/10 text-white backdrop-blur-sm'>Checkout</span>
             <h1 className='max-w-2xl text-3xl font-black tracking-tight sm:text-5xl'>A smoother cart and a calmer checkout flow.</h1>
-            <p className='max-w-2xl text-sm leading-7 text-slate-100/85 sm:text-base'>
+            <p className='max-w-2xl text-sm leading-7 text-slate-100/80 sm:text-base'>
               Review your products, adjust quantities, and complete payment in a cleaner, more refined layout.
             </p>
           </div>
@@ -50,7 +50,7 @@ const Cart = () => {
             <div className='space-y-5 border-b border-slate-200 pb-5'>
               <h2 className='text-2xl font-semibold tracking-tight text-slate-900'>Cart totals</h2>
               <p className='flex items-center justify-between gap-4 text-sm sm:text-base text-slate-600'>
-                Subtotal <span className='font-semibold text-slate-950'>$ {totalAmt}</span>
+                Subtotal <span className='font-semibold text-slate-900'>$ {totalAmt}</span>
               </p>
               <p className='flex items-start justify-between gap-4 text-sm sm:text-base text-slate-600'>
                 <span>Shipping</span>

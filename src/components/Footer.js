@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import { ImGithub } from 'react-icons/im'
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaArrowRight } from 'react-icons/fa'
 import { MdLocationOn } from 'react-icons/md'
@@ -72,7 +72,7 @@ const Footer = () => {
               Get updates on new arrivals, offers, and product drops.
             </p>
             <input className="input-surface mt-5 bg-white text-slate-900 placeholder:text-slate-400" placeholder="Email address" type="email" />
-            <button className="secondary-button mt-3 w-full border-white/15 bg-white px-4 py-3 text-slate-900 hover:bg-orange-50">
+            <button className="secondary-button mt-3 w-full border-white/10 bg-white px-4 py-3 text-slate-900 hover:bg-orange-50">
               Subscribe
             </button>
           </div>
