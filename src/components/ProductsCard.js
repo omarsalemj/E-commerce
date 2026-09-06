@@ -1,60 +1,73 @@
-import React from 'react'
+﻿import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import { addToCart } from '../redux/bazarSlice'
 
-const ProductsCard = ({product}) => {
-
+const ProductsCard = ({ product }) => {
   const dispatch = useDispatch()
-
   const navigate = useNavigate()
 
-  const _id = (product.title).toLowerCase().split(' ').join('')
+  const _id = product.title.toLowerCase().split(' ').join('')
 
   const handleDetails = () => {
     navigate(`/product/${_id}`, {
       state: {
         item: product,
-      }
+      },
     })
   }
 
   return (
-    <div className='group relative'>
-      <div className='w-full h-72 sm:h-80 lg:h-96 cursor-pointer overflow-hidden rounded-t-md' onClick={handleDetails}>
-        <img src={product.image} alt='productImg' className='w-full h-full object-cover group-hover:scale-110 duration-500' />
+    <article className='surface-soft group relative overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_70px_rgba(15,23,42,0.12)]'>
+      <div className='relative cursor-pointer overflow-hidden' onClick={handleDetails}>
+        <div className='absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(15,23,42,0)_40%,rgba(15,23,42,0.18)_100%)] opacity-0 transition duration-300 group-hover:opacity-100' />
+        <img
+          src={product.image}
+          alt='productImg'
+          className='h-[22rem] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[24rem]'
+          loading='lazy'
+        />
+        {product.isNew && (
+          <span className='absolute left-4 top-4 z-20 rounded-full bg-slate-950 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-lg'>
+            Sale
+          </span>
+        )}
       </div>
 
-      <div className='w-full border-[1px] px-3 py-4 rounded-b-md bg-white'>
-        <div className='flex justify-between items-start gap-3'>
-          <div className='min-w-0'>
-            <h2 className='font-titleFont text-sm sm:text-base font-bold h-10 sm:h-12 overflow-hidden'>{product.title.substring(0, 28)}</h2>
+      <div className='space-y-4 p-4 sm:p-5'>
+        <div className='flex items-start justify-between gap-3'>
+          <div className='min-w-0 flex-1'>
+            <h2 className='h-12 overflow-hidden text-sm font-semibold leading-6 text-slate-900 sm:text-base'>
+              {product.title.substring(0, 48)}
+            </h2>
+            <p className='mt-2 text-xs uppercase tracking-[0.22em] text-slate-500'>{product.category}</p>
           </div>
-          <div className='relative flex gap-2 overflow-hidden shrink-0'>
-            <div className='flex gap-2 transform group-hover:translate-x-24 transition-transform duration-500 w-28 justify-end'>
-              <p className='line-through text-gray-500 text-sm'>${product.oldPrice}</p>
-              <p className='font-semibold text-sm sm:text-base'>${product.price}</p>
-            </div>
-            <button onClick={() => dispatch(addToCart({
-              _id: product._id,
-              title: product.title,
-              image: product.image,
-              price: product.price,
-              quantity: 1,
-              description: product.description
-            })) && toast.success(`${product.title} is added`)} className='absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex items-center gap-1 top-0 transform -translate-x-32 group-hover:translate-x-0 transition-transform cursor-pointer duration-500 text-sm'>
-              add to cart <span><BsArrowRight /></span>
-            </button>
+          <div className='shrink-0 text-right'>
+            <p className='text-xs text-slate-400 line-through'>${product.oldPrice}</p>
+            <p className='text-base font-semibold text-slate-950 sm:text-lg'>${product.price}</p>
           </div>
         </div>
-        <div>
-          <p className='text-sm text-gray-600 capitalize'>{product.category}</p>
-        </div>
-        <div className='absolute top-4 right-0'>
-          {product.isNew && <p className='bg-black text-white font-semibold font-titleFont px-4 sm:px-6 py-1 text-sm'>Sale</p>}
-        </div>
+
+        <button
+          onClick={() =>
+            dispatch(
+              addToCart({
+                _id: product._id,
+                title: product.title,
+                image: product.image,
+                price: product.price,
+                quantity: 1,
+                description: product.description,
+              })
+            ) && toast.success(`${product.title} is added`)
+          }
+          className='secondary-button w-full justify-between border-slate-200 bg-slate-50 text-slate-700 hover:border-orange-200 hover:bg-orange-50 hover:text-orange-700'
+        >
+          <span>Add to cart</span>
+          <BsArrowRight />
+        </button>
       </div>
 
       <ToastContainer
@@ -69,7 +82,7 @@ const ProductsCard = ({product}) => {
         pauseOnHover
         theme='dark'
       />
-    </div>
+    </article>
   )
 }
 
