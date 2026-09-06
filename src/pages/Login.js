@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import { googleLogo, githubLogo } from '../assets'
 import { GoogleAuthProvider, getAuth, signInWithPopup, signOut } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify'

@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { createBrowserRouter, Outlet, RouterProvider, ScrollRestoration } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";

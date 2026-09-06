@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import ProductsCard from './ProductsCard'
 
 const Products = ({ products = [] }) => {
